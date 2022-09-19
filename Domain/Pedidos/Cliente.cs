@@ -34,7 +34,7 @@ namespace Domain.Pedidos
 
         public Password Senha { get; set; }
 
-        public IList<Pedido> Pedidos { get; set; }
+        public List<Pedido> Pedidos { get; set; }
 
         public void SetPassword()
         {

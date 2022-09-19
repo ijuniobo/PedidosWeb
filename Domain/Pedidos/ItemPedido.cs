@@ -10,6 +10,10 @@ namespace Domain.Pedidos
     {
         public int Id { get; set; }
 
+        public int IdProduto { get; set; }
+
+        public int IdPedido { get; set; }
+
         public int Quantidade { get; set; }
 
         public decimal PrecoUnitario { get; set; }
@@ -17,10 +21,6 @@ namespace Domain.Pedidos
         public decimal PrecoTotal { get; set; }
 
         public decimal Desconto { get; set; }
-
-        public int IdProduto { get; set; }
-
-        public int IdPedido { get; set; }
 
         public Produto Produto { get; set; }
 

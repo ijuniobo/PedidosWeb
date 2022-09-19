@@ -15,9 +15,9 @@ namespace Aplication
 
         public static IServiceCollection RegisterApplication(this IServiceCollection services)
         {
-            services.AddAutoMapper(typeof(ConfigurationModule).Assembly);
+            services.AddAutoMapper(typeof(Aplication.ConfigurationModule).Assembly);
 
-            services.AddMediatR(typeof(ConfigurationModule).Assembly);
+            services.AddMediatR(typeof(Aplication.ConfigurationModule).Assembly);
 
             services.AddScoped<IClienteService, ClienteService>();
             services.AddScoped<IItemPedidoService, ItemPedidoService>();

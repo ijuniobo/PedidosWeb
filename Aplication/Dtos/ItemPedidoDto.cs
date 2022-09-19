@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Aplication.Dtos
 {
-    public record ItemPedidoInputDto(int Id, int Quantidade, decimal PrecoUnitario, decimal PrecoTotal, decimal Desconto, int IdProduto, int IdPedido, ProdutoInputDto Produto, PedidoInputDto Pedido);
+    public record ItemPedidoInputDto(int Id, int Quantidade, decimal PrecoUnitario, decimal PrecoTotal, decimal Desconto, int IdProduto, int IdPedido);
 
-    public record ItemPedidoOutputDto(int Id, int Quantidade, decimal PrecoUnitario, decimal PrecoTotal, decimal Desconto, int IdProduto, int IdPedido, ProdutoOutputDto Produto, PedidoOutputDto Pedido);
+    public record ItemPedidoOutputDto(int Id, int Quantidade, decimal PrecoUnitario, decimal PrecoTotal, decimal Desconto, int IdProduto, int IdPedido);
 
 }

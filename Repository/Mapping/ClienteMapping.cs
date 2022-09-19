@@ -24,8 +24,12 @@ namespace Repository.Mapping
             builder.Property(x => x.Cnpj).HasMaxLength(20);
             builder.Property(x => x.Complemento).HasMaxLength(500);
             builder.Property(x => x.Login).IsRequired().HasMaxLength(500);
-            builder.Property(x => x.Senha).IsRequired().HasMaxLength(8);
             builder.Property(x => x.TipoPessoa).HasMaxLength(50);
+
+            builder.OwnsOne(x => x.Senha, p =>
+            {
+                p.Property(f => f.Valor).HasColumnName("Senha").IsRequired();
+            });
 
             builder.HasMany(x => x.Pedidos).WithOne().OnDelete(DeleteBehavior.Cascade);
         }

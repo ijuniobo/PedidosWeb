@@ -18,7 +18,7 @@ namespace Repository.Mapping
 
             builder.HasOne(c => c.Produto)
                    .WithMany(e => e.ItensPedido)
-                   .HasForeignKey(e => e.IdProduto);
+                   .HasForeignKey(e=> e.IdProduto);
 
             builder.HasOne(c => c.Pedido)
                    .WithMany(e => e.Itens)

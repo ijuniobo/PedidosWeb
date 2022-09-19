@@ -22,7 +22,7 @@ namespace Domain.Pedidos
 
         public int Estoque { get; set; }
 
-        public IList<ItemPedido> ItensPedido { get; set; }
+        public List<ItemPedido> ItensPedido { get; set; }
 
     }
 }

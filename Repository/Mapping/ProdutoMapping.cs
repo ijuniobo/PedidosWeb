@@ -19,7 +19,7 @@ namespace Repository.Mapping
             builder.Property(x => x.TipoProduto).IsRequired().HasMaxLength(500);
             builder.Property(x => x.CodigoBarras).IsRequired().HasMaxLength(13);
 
-            builder.HasMany(x => x.ItensPedido).WithOne().OnDelete(DeleteBehavior.Cascade);
+            builder.HasMany(x => x.ItensPedido).WithOne();
         }
     }
 }
