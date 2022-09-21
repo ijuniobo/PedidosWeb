@@ -22,6 +22,8 @@ namespace Domain.Pedidos
 
         public int Estoque { get; set; }
 
+        public string Foto { get; set; }
+
         public List<ItemPedido> ItensPedido { get; set; }
 
     }

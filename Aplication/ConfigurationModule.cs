@@ -1,4 +1,5 @@
-﻿using Aplication.Service;
+﻿using Aplication.AzureBlob;
+using Aplication.Service;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -23,6 +24,12 @@ namespace Aplication
             services.AddScoped<IItemPedidoService, ItemPedidoService>();
             services.AddScoped<IPedidoService, PedidoService>();
             services.AddScoped<IProdutoService, ProdutoService>();
+
+            services.AddScoped<AzureBlobStorage>();
+
+            services.AddHttpClient();
+
+
 
             return services;
         }
