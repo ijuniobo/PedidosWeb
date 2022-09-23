@@ -2,11 +2,13 @@
 using Aplication.Handler.Command;
 using Aplication.Handler.Query;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace PedidosWebApi.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ItemPedidoController : ControllerBase
